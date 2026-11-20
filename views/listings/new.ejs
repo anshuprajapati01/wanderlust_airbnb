@@ -6,6 +6,7 @@
   <div class="col-8 offset-2">
     <h3>Create a New Listing</h3>
     <form
+      id="newListingForm"
       method="POST"
       action="/listings"
       novalidate
@@ -77,9 +78,38 @@
         />
         <div class="invalid-feedback">Location should be valid</div>
       </div>
-      <button class="btn btn-dark add-btn mt-3">Add</button>
+      <button
+        id="addListingBtn"
+        type="submit"
+        class="btn btn-dark add-btn mt-3"
+      >
+        Add
+      </button>
       <br />
       <br />
     </form>
   </div>
 </div>
+
+<script>
+  const listingForm = document.getElementById("newListingForm");
+  const addListingBtn = document.getElementById("addListingBtn");
+  let isSubmitting = false;
+
+  if (listingForm && addListingBtn) {
+    listingForm.addEventListener("submit", function (event) {
+      if (!listingForm.checkValidity()) {
+        return;
+      }
+
+      if (isSubmitting) {
+        event.preventDefault();
+        return;
+      }
+
+      isSubmitting = true;
+      addListingBtn.disabled = true;
+      addListingBtn.innerText = "Adding...";
+    });
+  }
+</script>
