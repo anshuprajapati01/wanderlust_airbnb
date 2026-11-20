@@ -1,0 +1,163 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/*Navbar*/
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer style */
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-info-socials i {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column; /* FIX: Stacks the items vertically */
+  justify-content: space-evenly; /* FIX: Spreads them out nicely from top to bottom */
+  align-items: center; /* FIX: Centers them horizontally */
+}
+
+/* Cards */
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  height: 20rem !important; /* ADD THIS LINE */
+
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text p {
+  font-weight: 400;
+}
+.listing-link {
+  text-decoration: none;
+}
+/* Card Effect */
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+/* New Page */
+
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Edit Page */
+.edit-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+
+.btns {
+  display: flex;
+}
+
+.show-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Map Container */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Airbnb-style Custom Marker */
+.airbnb-marker {
+  width: 42px;
+  height: 42px;
+  background-color: #fe424d;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  /* Soft outer ring (Airbnb approximate area effect) */
+  box-shadow:
+    0 0 0 18px rgba(254, 66, 77, 0.2),
+    0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.airbnb-marker:hover {
+  transform: scale(1.1);
+}
+
+/* Popup styling */
+.mapboxgl-popup-content {
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+.map-popup h6 {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #222222;
+}
